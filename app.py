@@ -8,7 +8,7 @@ from flask import Flask,render_template,request,redirect
 
 app_stock = Flask(__name__)
 
-@app_stock.route('/index',methods=["GET","POST"])
+@app_stock.route('/',methods=["GET","POST"])
 def index():   
 	if request.method == 'GET':
 		return render_template('index.html')
