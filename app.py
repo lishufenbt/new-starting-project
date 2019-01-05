@@ -1,4 +1,3 @@
-import numpy as np
 import pandas as pd
 import json
 import requests
@@ -35,7 +34,7 @@ def index():
 	plot_bk.xaxis.axis_label = 'Date'
 	plot_bk.yaxis.axis_label = 'Closing Price'
 	show(plot_bk)
-	return render_template('stock_pick.html')
+	return render_template('index.html')
 
 if __name__ == "__main__":
 	port = int(os.environ.get("PORT", 5000))
