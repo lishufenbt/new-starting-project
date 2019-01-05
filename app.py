@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route('/index',methods=["GET","POST"])
 def index():   
 	if request.method == 'GET':
-		return render_template('stock_pick.html')
+		return render_template('index.html')
 	else:
 		stock_abbr=request.form["abbr_stock"]
 		date_start=request.form["start_date"]
@@ -37,5 +37,6 @@ def index():
 	return render_template('index.html')
 
 if __name__ == "__main__":
-	port = int(os.environ.get("PORT", 5000))
-	app.run(host='0.0.0.0', port=port)
+	#port = int(os.environ.get("PORT", 5000))
+	#app.run(host='0.0.0.0', port=port)
+	app.run()
