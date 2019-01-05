@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<div class=page>
+     <head>
+     	<title>Stock Price</title>
+     </head>
+     <div class=metanav>
+     <body>
+     	<!--Headings-->
+     	<h1>Please type in the stock interested</h1>
+        <h2>Please be advised only some stocks are available due to limits set by the data provider</h2>
+        <h2>Date needs to be in between 1981 and now</h2>
+        <hr>
+        <form id="stock_pick" method="POST" action="index">
+            <p>
+            Please type in the stock name <input type="text" name="abbr_stock" />
+            </p>    
+            <p>
+            Please type in start date <input type="date" name="start_date" /> 
+            </p>
+            <p>
+            Please type in end date <input type="date" name="end_date" /> 
+            </p>
+            <p>
+            <input type='submit' value='Submit' />
+            </p>
+        </form>    
+        	
+     </body>
+     </div>
+</div>
+</html>
