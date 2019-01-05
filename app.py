@@ -5,9 +5,10 @@ import urllib.parse
 from bokeh.plotting import figure, output_file, show
 import os
 from flask import Flask,render_template,request,redirect
-app = Flask(__name__)
 
-@app.route('/index',methods=["GET","POST"])
+app_stock = Flask(__name__)
+
+@app_stock.route('/index',methods=["GET","POST"])
 def index():   
 	if request.method == 'GET':
 		return render_template('index.html')
@@ -38,5 +39,5 @@ def index():
 
 if __name__ == "__main__":
 	port = os.environ.get("PORT", 5000)
-	app.run(host='http://0.0.0.0', port=port)
+	app_stock.run(host='http://0.0.0.0', port=port)
 	#app.run()
