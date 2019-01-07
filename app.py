@@ -1,5 +1,5 @@
 import pandas as pd
-import json
+import simplejson as json
 import requests
 import urllib.parse
 from bokeh.plotting import figure, output_file, show
