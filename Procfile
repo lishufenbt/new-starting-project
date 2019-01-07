@@ -1,1 +1,2 @@
-web: gunicorn app:app_stock --preload
+web python app.py
+
