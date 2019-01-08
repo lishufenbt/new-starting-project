@@ -22,7 +22,7 @@ def index():
 		key_api= "&api_key=G8yRiWzvwHLrbT9oDPGY"
 		url=main_url+stock_abbr+connection+date_start+middle_words+date_end+key_api	
 		json_data=requests.get(url).json()
-		list_jd=json_data['dataset']['data']
+		list_jd=json_data["dataset"]["data"]
 		list_date=pd.to_datetime([item[0] for item in list_jd])
 		list_close=[item[4] for item in list_jd]  
 		df=pd.DataFrame({"date":list_date,"closing price":list_close})
